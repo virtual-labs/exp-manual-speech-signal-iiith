@@ -1,4 +1,4 @@
-### Link your observations in here
+### Observations 
 
 - Marking boundaries at the phoneme-level is the most diffcult compared to using larger units such as syllables or words.
 
