@@ -22,6 +22,7 @@ Write a small program in C or any scripting language (bash, csh, awk, perl, pyth
 
 
 Eg: Input: namaskAr aapka swaagat hai
-      Output: n-a_m-a-s_k-A-r aa-p_k-a s-w-aa_g-a-t h-ai
+    
+   Output: n-a_m-a-s_k-A-r aa-p_k-a s-w-aa_g-a-t h-ai
 
 
