@@ -1,5 +1,3 @@
-### Theory  
-
 The main objective of this experiment is to make the student understand and appreciate the difficulties in automating the task of speech signal-to-symbol transformation. The students are expected to understand terms such as phones, phonemes, syllables, transliteration, pitch or fundamental frequency, quasi-periodicity. The student should gain a good understanding of the speech signal by visual inspection. Given a speech waveform one should be able to discriminate between silence and speech, voiced speech and unvoiced speech. The student should be able to draw the speech waveform for a given word with appropriate time durations and relative amplitudes of the constituent phones.
 
 Write down a sentence in any Indian language, preferably your native language, on a piece of paper or your note book. Also, write down the sentence in English the way you would probably write it if you were writing a mail to your friend in your language
