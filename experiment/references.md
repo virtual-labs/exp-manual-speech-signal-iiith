@@ -1,6 +1,3 @@
-### References 
-
-
    - [Wiki on ITRANS code](https://en.wikipedia.org/wiki/ITRANS)
 
    - [The original ITRANS project by Avinash Chopde](https://www.aczoom.com/itrans/)
