@@ -42,7 +42,7 @@ This part of the experiment is similar to the first two parts, but you have to c
 
    Step5 : Use the 'Zoom Slider', select and 'Play' buttons to select a portion of the waveform, listen, and enter the subword boundaries in the table.
 
-Observations 
+## Observations 
 
 - Marking boundaries at the phoneme-level is the most diffcult compared to using larger units such as syllables or words.
 
