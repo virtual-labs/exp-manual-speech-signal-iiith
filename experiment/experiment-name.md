@@ -1,1 +1,1 @@
-## Manual Speech Signal Processing 
+## Manual speech signal-to-symbol transformation
