@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
     <meta charset="utf-8"/>
     <title>Experiment</title>
     <script crossorigin="anonymous" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </head>
   <body class="row d-flex justify-content-center"><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     <input id="partnum" type="hidden" value="1"/>
-
+    
     <div class="container-fluid ml-5 mt-5">
       <div class="row">
         <div class="col-sm"><h4>Part-1: Pre-segmented examples</h4></div>
@@ -25,9 +25,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-sm"><a href="exp-02.html"><b>Part-2 &gt;&gt;</b></a></div>
       </div>
       <!--<table width=900><tr>
-    <td><h2>Part-1: Pre-segmented examples</h2></td>
-    <td width=200 align=right><a href='exp-02.html'><b>Part-2 &gt;&gt;</b></a></td>
-    </tr></table>-->
+          <td><h2>Part-1: Pre-segmented examples</h2></td>
+          <td width=200 align=right><a href='exp-02.html'><b>Part-2 &gt;&gt;</b></a></td>
+      </tr></table>-->
       <div class="row ml-2">
         <font size="-1"> <a href="readme.html">README</a></font><br/><br/>
       </div>
@@ -43,8 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <input class="btn btn-info btn-sm ml-2" name="go" onclick="hideDiv();" type="Reset" value="Reset"/>
         </form>
       </div>
-      <div class="justify-content-md-center" id="SelectLoad" style="visibility:
-        hidden;position: relative;top:2%">
+      <div class="justify-content-md-center" id="SelectLoad" style="visibility:hidden;position: relative;top:2%">
         <div>
           <div class="row ml-3">
             <font size="-1">Change subword unit: </font>
@@ -59,18 +58,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div style="padding-top: 2%;">
           <table class="table table-striped" id="exptable" style="width: 60%">
             <tbody><tr>
-              <th>Utterance</th>
-              <td id="utterance"></td>
-            </tr>
-            <tr>
-              <th>Transliteration</th>
-              <td id="transliteration"></td>
-            </tr>
-            <tr>
-              <th>Subword units</th>
-              <td id="subword"></td>
-            </tr>
-
+                <th>Utterance</th>
+                <td id="utterance"></td>
+              </tr>
+              <tr>
+                <th>Transliteration</th>
+                <td id="transliteration"></td>
+              </tr>
+              <tr>
+                <th>Subword units</th>
+                <td id="subword"></td>
+              </tr>
+              
           </tbody></table>
         </div>
         <br/>
@@ -81,27 +80,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             automatically zooms to fit the presegmented label.</li><li>Repeat
             the experiment by choosing word and phoneme as the subword unit.</li>
         </ol>
-
+        
         <table>
           <tbody><tr>
-            <td id="mt-2 col-md-12" style="width: 700px;padding-top: 7%;">
-              <div class="vl"><img height="410px" src="images/Ruler.png"/><div class="position-relative" id="waveform" style="width: 600px;"></div></div>
-              <div col-md-12="" style="padding-left: 3%;"><div id="waveform-timeline"></div></div>
-
-              <script src="js/exp1-01.js"></script>
-              <br/>
-              <div class="mt-2 col-md-10" style="padding-left: 35%;">
-                <button class="btn btn-primary position-relative" name="play" onclick="playButton();" type="button">Play/Pause</button>
-              </div>
-              <p class="row">
+              <td id="mt-2 col-md-12" style="width: 700px;padding-top: 7%;">
+                <div class="vl"><img height="410px" src="images/Ruler.png"/><div class="position-relative" id="waveform" style="width: 600px;"></div></div>
+                <div col-md-12="" style="padding-left: 3%;"><div id="waveform-timeline"></div></div>
+                
+                <script src="js/exp1-01.js"></script>
+                <br/>
+                <div class="mt-2 col-md-10" style="padding-left: 35%;">
+                  <button class="btn btn-primary position-relative" name="play" onclick="playButton();" type="button">Play/Pause</button>
+                </div>
+                <p class="row">
                 </p><div class="col-xs-1">
                   <i class="glyphicon glyphicon-search"></i>
                 </div>
-
+                
                 <div class="col-xs-10" style="padding-left: 3%;">
                   <input id="slider" max="10000" min="1" onchange="zoom(this);" style="width: 86%" type="range" value="1"/>
                 </div>
-
+                
                 <div class="col-xs-1">
                   <i class="glyphicon glyphicon-zoom-out"></i>
                 </div>
@@ -118,9 +117,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </table>
               </td>
             </tr>
-          </tbody></table>
-        </div>
+        </tbody></table>
       </div>
-    
-  
-</body></html>
+    </div>
+  </body>
+</html>
