@@ -14,7 +14,7 @@
 
    Step7 : Change the subword unit to phoneme and repeat the experiment.
 
-### Part-2: Segmentation with feedback
+**Part-2: Segmentation with feedback**
 
 This part of the experiment is very similar to Part-1, except that the word/subword boundaries are not provided. The student is required to segment the given utterance into the chosen subword units by entering the correct subword boundaries.
 
