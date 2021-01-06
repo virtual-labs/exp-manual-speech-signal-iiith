@@ -1,1 +1,1 @@
-## Manual speech signal-to-symbol transformation
+## Manual Speech Signal-to-Symbol Transformation
