@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<html dir="ltr" lang="en">
+  <head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experiment</title>
     <script crossorigin="anonymous" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://unpkg.com/wavesurfer.js"></script>
@@ -15,117 +17,110 @@
     <script crossorigin="anonymous" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <link href="css/exp-01.css" rel="stylesheet" type="text/css"/>
   </head>
-  <body class="row d-flex justify-content-center"><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+  <body class="container-fluid d-flex flex-column justify-content-center"><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     <input id="partnum" type="hidden" value="2"/>
-    <div class="container-fluid ml-5 mt-5">
-      <div class="row">
-        <div class="col-sm"><h4>Part-2: Segmentation with feedback </h4></div>
-        <div align="right" class="col-sm"></div>
-        <div class="col-sm"><a href="exp-01.html"><b>&lt;&lt;Part-1</b></a>
-          || <a href="exp-03.html"><b>Part-3 &gt;&gt;</b></a></div>
-      </div>
-      <div>
-        <br/>
-        <div class="row ml-3">
-          <form id="myform" method="post" name="myform">
-            <select id="exnum" name="exnum" onchange="LoadExperiment(this);">
-              <option value="0">Select an utterance</option>
-              <option value="1">Ex-1: Hindi</option>
-              <option value="2">Ex-2: Telugu</option>
-              <option value="3">Ex-3: Kannada</option>
-              <option value="4">Ex-4: Tamil</option>
-            </select>
-            <input class="btn btn-info btn-sm" name="go" onclick="hideDiv();" style="position: relative;left: 2%;" type="Reset" value="Reset"/>
-          </form>
+      <div class="d-flex justify-content-between mt-4">
+        <h4>Part-2: Segmentation with feedback</h4>
+        <div class="flex-shrink-0">
+          <a href="exp-01.html"><b>&lt;&lt;Part-1</b></a>
+          ||
+          <a href="exp-03.html"><b>Part-3 &gt;&gt;</b></a>
         </div>
-        <br/>
-        <div id="SelectLoad" style="visibility: hidden">
-          <div>
-            <div class="row ml-3">
-              <font size="-1">Change subword unit: </font>
-              <select id="swunit" name="swunit" onchange="loadSubword(this);">
-                <option name="syl" value="syll">Syllable</option>
-                <option name="phn" value="phon">Phoneme</option>";
-                <option name="wrd" value="word">Word</option>";
-              </select>
-            </div>
-          </div>
-          
-          <div hidden="" id="lang"></div>
-          <div style="padding-top: 2%;">
-            <table class="table table-striped" id="exptable" style="width: 60%">
-              <tbody><tr>
-                  <th>Utterance</th>
-                  <td id="utterance"></td>
-                </tr>
-                <tr>
-                  <th>Transliteration</th>
-                  <td id="transliteration"></td>
-                </tr>
-                <tr>
-                  <th>Subword units</th>
-                  <td id="subword"></td>
-                </tr>
-                
-            </tbody></table>
-          </div>
-          <br/>
-          <ol>
-            <font size="-1">
-              <li>Verify the subword unit boundaries given in the
+      </div>
+      <div class="mt-4">
+        <form id="myform" method="post" name="myform">
+          <select id="exnum" name="exnum" onchange="LoadExperiment(this);">
+            <option value="0">Select an utterance</option>
+            <option value="1">Ex-1: Hindi</option>
+            <option value="2">Ex-2: Telugu</option>
+            <option value="3">Ex-3: Kannada</option>
+            <option value="4">Ex-4: Tamil</option>
+          </select>
+          <input class="btn btn-info btn-sm ml-2" name="go" onclick="hideDiv();" type="Reset" value="Reset"/>
+        </form>
+      </div>
+      <div id="SelectLoad" style="visibility:hidden;position: relative;top:2%">
+        <div class="mt-4">
+          <font size="-1">Change subword unit: </font>
+          <select id="swunit" name="swunit" onchange="loadSubword(this);">
+            <option name="syl" value="syll">Syllable</option>
+            <option name="phn" value="phon">Phoneme</option>";
+            <option name="wrd" value="word">Word</option>";
+          </select>
+        </div>
+        <div hidden="" id="lang"></div>
+        <div class="pt-4">
+          <table class="table table-striped w-auto" id="exptable">
+            <tbody>
+              <tr>
+                <th>Utterance</th>
+                <td id="utterance"></td>
+              </tr>
+              <tr>
+                <th>Transliteration</th>
+                <td id="transliteration"></td>
+              </tr>
+              <tr>
+                <th>Subword units</th>
+                <td id="subword"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ol class="mt-4" style="font-size: small;">
+          <font size="-1">
+            <li>
+              Verify the subword unit boundaries given in the
                 table by zooming and listening to selected
-                portions of the waveform.</li><li>Note that
+                portions of the waveform.
+            </li>
+            <li>
+              Note that
                 clicking on the symbol within the first column
                 of the table automatically zooms to fit the
-                presegmented label.</li><li>Repeat the
+                presegmented label.
+            </li>
+            <li>Repeat the
                 experiment by choosing word and phoneme as the
-                subword unit.</li>
-            </font>
-          </ol>
-          
-          <table>
-            <tbody><tr>
-                <td id="mt-2
-                        col-md-12" style="width: 700px;padding-top: 7%;">
-                  <div class="vl col-md-12"><img height="410px" src="images/Ruler.png"/><div class="position-relative" id="waveform" style="width: 600px;"></div></div>
-                  
-                  <div col-md-12="" style="padding-left: 3%;"><div id="waveform-timeline"></div></div>
-                  <script src="js/exp1-01.js"></script>
-                  <br/>
-                  <div class="mt-2 col-md-10" style="padding-left:
-                                                     35%;">
-                    <button class="btn btn-primary position-relative" name="play" onclick="playButton();" type="button">Play/Pause</button>
-                  </div>
-                  <p class="row">
-                  </p><div class="col-xs-1">
-                    <i class="glyphicon glyphicon-zoom-in"></i>
-                  </div>
-                  
-                  <div class="col-xs-10" style="padding-left:
-                                                3%;">
-                    <input id="slider" max="10000" min="1" onchange="zoom(this);" style="width:
-                                                                                         86%" type="range" value="1"/>
-                  </div>
-                  
-                  <div class="col-xs-1">
-                    <i class="glyphicon glyphicon-zoom-out"></i>
-                  </div>
-                </td>
-                <td style="width: 150px;padding: 0%;">
-                  <table border="1" class="table" id="Subword">
-                    <thead class="thead-dark">
-                      <tr>
-                        <th>SYM</th>
-                        <th>BEG</th>
-                        <th>END</th>
-                      </tr>
-                  </thead></table>
-                </td>
-              </tr>
-          </tbody></table>
-          
+                subword unit.
+            </li>
+          </font>
+        </ol>
+        <div class="d-flex flex-wrap justify-content-center">
+          <div class="d-flex align-content-center justify-content-center">
+            <figure class="figure">
+              <img src="images/Ruler.png" height="410px" class="figure-img" alt="Ruler">
+            </figure>
+            <div class="d-flex flex-column align-content-stretch align-items-center">
+              <div class="position-relative" id="waveform" style="width: 600px;">
+              </div>
+              <div class="align-self-stretch" id="waveform-timeline"></div>
+              <div class="mt-2">
+                <button class="btn btn-primary position-relative" name="play" onclick="playButton();" type="button">Play/Pause</button>
+              </div>
+              <div class="col-xs-1">
+                <i class="glyphicon glyphicon-zoom-in"></i>
+              </div>
+              <input class="mt-2 align-self-stretch" id="slider" max="10000" min="1" onchange="zoom(this);" type="range" value="1"/>
+                
+              <div class="col-xs-1">
+                <i class="glyphicon glyphicon-zoom-out"></i>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center table-responsive-sm">
+            <table border="1" class="table table-sm w-auto" id="Subword">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">SYM</th>
+                  <th scope="col">BEG</th>
+                  <th scope="col">END</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    <script src="js/exp1-01.js"></script>
   </body>
 </html>
