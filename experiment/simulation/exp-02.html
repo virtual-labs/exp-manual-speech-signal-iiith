@@ -50,7 +50,7 @@
         </div>
         <div hidden="" id="lang"></div>
         <div class="pt-4">
-          <table class="table-responsive table-striped" id="exptable">
+          <table class="table table-striped w-auto" id="exptable">
             <tbody>
               <tr>
                 <th>Utterance</th>
@@ -88,35 +88,37 @@
         </ol>
         <div class="d-flex flex-wrap justify-content-center">
           <div class="d-flex align-content-center justify-content-center">
-          <figure class="figure">
-            <img src="images/Ruler.png" height="410px" class="figure-img" alt="Ruler">
-          </figure>
-          <div class="d-flex flex-column align-content-stretch align-items-center">
-            <div class="position-relative" id="waveform" style="width: 600px;">
-            </div>
-            <div class="align-self-stretch" id="waveform-timeline"></div>
-            <div class="mt-2">
-              <button class="btn btn-primary position-relative" name="play" onclick="playButton();" type="button">Play/Pause</button>
-            </div>
-            <div class="col-xs-1">
-              <i class="glyphicon glyphicon-zoom-in"></i>
-            </div>
-            <input class="mt-2 align-self-stretch" id="slider" max="10000" min="1" onchange="zoom(this);" type="range" value="1"/>
+            <figure class="figure">
+              <img src="images/Ruler.png" height="410px" class="figure-img" alt="Ruler">
+            </figure>
+            <div class="d-flex flex-column align-content-stretch align-items-center">
+              <div class="position-relative" id="waveform" style="width: 600px;">
+              </div>
+              <div class="align-self-stretch" id="waveform-timeline"></div>
+              <div class="mt-2">
+                <button class="btn btn-primary position-relative" name="play" onclick="playButton();" type="button">Play/Pause</button>
+              </div>
+              <div class="col-xs-1">
+                <i class="glyphicon glyphicon-zoom-in"></i>
+              </div>
+              <input class="mt-2 align-self-stretch" id="slider" max="10000" min="1" onchange="zoom(this);" type="range" value="1"/>
                 
-            <div class="col-xs-1">
-              <i class="glyphicon glyphicon-zoom-out"></i>
+              <div class="col-xs-1">
+                <i class="glyphicon glyphicon-zoom-out"></i>
+              </div>
             </div>
           </div>
-        </div>
-          <table border="1" class="table-responsive w-auto" id="Subword">
-            <thead class="thead-dark">
-              <tr>
-                <th>SYM</th>
-                <th>BEG</th>
-                <th>END</th>
-              </tr>
-            </thead>
-          </table>
+          <div class="d-flex justify-content-center table-responsive-sm">
+            <table border="1" class="table table-sm w-auto" id="Subword">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">SYM</th>
+                  <th scope="col">BEG</th>
+                  <th scope="col">END</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </div>
     <script src="js/exp1-01.js"></script>
